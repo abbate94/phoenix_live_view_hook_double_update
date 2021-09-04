@@ -1,0 +1,13 @@
+<h1>Log1</h1>
+<div id="log-1" phx-update="append" >
+  <%= for {id, msg} <- @log1 do %>
+    <p id={"log-1-#{id}"}><%= msg %></p>
+  <% end %>
+</div>
+
+<h1>Log2</h1>
+<div id="log-2" phx-update="append" phx-hook="TestHook">
+  <%= for {id, msg} <- @log2 do %>
+    <p id={"log-2-#{id}"}><%= msg %></p>
+  <% end %>
+</div>
