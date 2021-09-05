@@ -1,3 +1,6 @@
+<button phx-click="next1">Next 1</button>
+<button phx-click="next2">Next 2</button>
+
 <h1>Log1</h1>
 <div id="log-1" phx-update="append" >
   <%= for {id, msg} <- @log1 do %>
